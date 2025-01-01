@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="inputBox">
+            <input type="text" class="passBox" id="passBox" readonly placeholder="Generated Password"/>
+            <i id="copyIcon" class="fa-solid fa-copy"></i>
+        </div>
+        <input type="range" min="1" max="30" value="8" id="inputSlider">
+        <div class="row">
+            <p><i class="fas fa-text-height"></i> Password Length</p>
+            <span id="sliderValue">8</span>
+        </div>
+        <div class="row">
+            <label for="lowercase">
+                <i class="fas fa-font"></i>
+                Include Lowercase
+            </label>
+            <input type="checkbox" id="lowercase" checked>
+        </div>
+        <div class="row">
+            <label for="uppercase">
+                <i class="fas fa-font fa-lg"></i>
+                Include Uppercase
+            </label>
+            <input type="checkbox" id="uppercase">
+        </div>
+        <div class="row">
+            <label for="numbers">
+                <i class="fas fa-hashtag"></i>
+                Include Numbers
+            </label>
+            <input type="checkbox" id="numbers">
+        </div>
+        <div class="row">
+            <label for="symbols">
+                <i class="fas fa-at"></i>
+                Include Symbols
+            </label>
+            <input type="checkbox" id="symbols">
+        </div>
+        <button type="button" class="btn" id="btn">
+            <i class="fas fa-key"></i>
+            Generate Password
+        </button>
+    </div>
+
+    <div id="copyAlert" class="copy-alert">
+        <i class="fas fa-check-circle"></i> Password copied!
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
